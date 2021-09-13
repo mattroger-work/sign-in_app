@@ -1,0 +1,65 @@
+<script src="scripts/signIn_script.js"></script>
+<script type="module" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+<table id="table_root" class="table">
+    <tr>
+        <td>First Name:</td>
+        <td><input type="text" id="first_name" /></td>
+    </tr>
+    <tr>
+        <td>Last Name:</td>
+        <td><input type="text" id="last_name"/></td>
+    </tr>
+    <tr>
+        <div class = "ui-widget">
+            <td>Person you are visiting today:</td>
+            <td><input type="text" id="poi" placeholder="First 3 Characters"/></td>
+        </div>
+    </tr>
+    <tr>
+        <td>U.S. Citizen:</td>
+        <td><label for="yes">Yes</label><input type="radio" id="us_cit_yes" name="us_cit"/>
+        <label style="padding-left:20px" for="no">No</label><input type="radio" id="us_cit_no" name="us_cit"/></td>
+    </tr>
+    <tr>
+        <td>Classified Visit:</td>
+        <td><label for="yes">Yes</label><input type="radio" id="class_visit_yes" name="class_visit"/>
+        <label style="padding-left:20px" for="no">No</label><input type="radio" id="class_visit_no" name="class_visit"/></td>
+    </tr>
+    <tr>
+        <td>Escort Required:</td>
+        <td><label for="yes">Yes</label><input type="radio" id="escort_req_yes" name="escort_req"/>
+        <label style="padding-left:20px" for="no">No</label><input type="radio" id="escort_req_no" name="escort_req"/></td>
+    </tr>
+    <tr>
+        <td>Representing Company:</td>
+        <td><input type="text" id="rep_comp"/></td>
+    </tr>
+    <tr>
+        <td>Meeting Purpose:</td>
+        <td><input type="text" id="meet_pur"/></td>
+     </tr>
+     <tr>
+         <td>
+            <div id="takeAPhoto">
+                <p>Preview</p>
+                <div class="camera">
+                    <video id="video">Video stream not available.</video>
+                    <button style="width: 100px; height: 40px;" id="startbutton">Take photo</button>
+                </div>
+                <td>
+                    <canvas id="canvas">
+                    </canvas>
+                    <p style="margin-top:0px;">Photo</p>
+                    <div class="output">
+                        <img id="photo" alt="The screen capture will appear in this box.">
+                    </div>
+                </td>
+         </td>
+     </tr>
+    <tr>
+        <td style="background-color: white;"><button id="submitBtn" onclick="sendMail()">Submit</button></td>
+        </div>
+    </tr>
+</table>
+
+
